@@ -1,0 +1,28 @@
+<!ELEMENT rss (script*, channel)>
+
+<!ELEMENT script EMPTY>
+<!ATTLIST script id CDATA #REQUIRED>
+
+<!ELEMENT channel (title, description, language, link, lastBuildDate, item+)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT lastBuildDate (#PCDATA)>
+<!ELEMENT item (guid, title, pubDate, link, dc:creator, dcterms:alternative, description, category+, media:content?, content:encoded?)>
+
+<!ELEMENT guid (#PCDATA)>
+<!ATTLIST guid isPermaLink (true|false) "false">
+
+<!ELEMENT pubDate (#PCDATA)>
+<!ELEMENT dc:creator (#PCDATA)>
+<!ELEMENT dcterms:alternative (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+
+<!ELEMENT media:content EMPTY>
+<!ATTLIST media:content ,url CDATA #REQUIRED,type CDATA #IMPLIED,medium CDATA #IMPLIED>
+
+<!ELEMENT content:encoded (#PCDATA)>
+<!ELEMENT rss>
